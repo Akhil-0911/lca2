@@ -1,0 +1,24 @@
+{
+  "timestamp": "20250919_025639",
+  "material_type": "copper",
+  "data_source": "ICA_EPA_copper_standards",
+  "models": {
+    "environmental_efficiency": {
+      "r2_score": 0.9999663498109121,
+      "file": "copper_models/copper_environmental_model_20250919_025639.pkl"
+    },
+    "circularity_predictor": {
+      "r2_score": 0.981857111182307,
+      "file": "copper_models/copper_circularity_model_20250919_025639.pkl"
+    },
+    "process_classification": {
+      "accuracy": 0.9,
+      "file": "copper_models/copper_classification_model_20250919_025639.pkl"
+    }
+  },
+  "encoders": {
+    "classification_encoder": "copper_models/copper_classification_encoder_20250919_025639.pkl",
+    "energy_encoder": "copper_models/copper_energy_encoder_20250919_025639.pkl",
+    "location_encoder": "copper_models/copper_location_encoder_20250919_025639.pkl"
+  }
+}

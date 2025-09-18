@@ -1,0 +1,40 @@
+{
+  "environmental": {
+    "model_type": "random_forest",
+    "r2_score": 0.7066288015012439,
+    "mae": 0.08541058118107875,
+    "cv_mean": 0.719411250665551,
+    "cv_std": 0.02756194579481458
+  },
+  "circularity": {
+    "model_type": "multi_output_random_forest",
+    "target_metrics": {
+      "scrap_ratio": {
+        "r2": 0.7582575929729486,
+        "mae": 0.03900138705264548
+      },
+      "recycling_rate": {
+        "r2": 0.9044415839754899,
+        "mae": 0.07764626594227038
+      },
+      "waste_ratio": {
+        "r2": 0.45072512088730643,
+        "mae": 0.03850959946127096
+      },
+      "energy_recovery_rate": {
+        "r2": 0.3894910232849731,
+        "mae": 0.10696700103795968
+      }
+    }
+  },
+  "classification": {
+    "model_type": "random_forest_classifier",
+    "accuracy": 0.9041666666666667,
+    "classes": [
+      "Other_Manufacturing",
+      "Primary_Metallurgy",
+      "Recycling_Operations",
+      "Secondary_Metallurgy"
+    ]
+  }
+}
