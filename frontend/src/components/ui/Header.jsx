@@ -38,25 +38,25 @@ const Header = () => {
   const isActivePath = (path) => location?.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border shadow-earth">
-      <div className="flex items-center justify-between h-16 px-6">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-earth">
+      <div className="flex items-center justify-between h-20 px-6 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="flex items-center space-x-3">
-          <div className="flex items-center justify-center w-10 h-10 bg-primary rounded-lg">
-            <Icon name="Leaf" size={24} color="white" strokeWidth={2.5} />
+        <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl shadow-earth-md">
+            <Icon name="Leaf" size={28} color="white" strokeWidth={2.5} />
           </div>
           <div className="flex flex-col">
-            <h1 className="text-xl font-heading font-semibold text-foreground leading-tight">
+            <h1 className="text-xl font-heading font-bold text-foreground leading-tight">
               EcoLCA Pro
             </h1>
-            <span className="text-xs text-muted-foreground font-caption">
-              Sustainability Assessment
+            <span className="text-xs text-muted-foreground font-medium tracking-wide">
+              AI-Powered Sustainability
             </span>
           </div>
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        <nav className="hidden md:flex items-center space-x-2">
           {navigationItems?.map((item) => (
             <Button
               key={item?.path}
@@ -66,15 +66,15 @@ const Header = () => {
               iconName={item?.icon}
               iconPosition="left"
               iconSize={18}
-              className="transition-all duration-200 ease-out"
+              className="transition-all duration-300 ease-out hover:scale-105 font-medium"
             >
               {item?.label}
             </Button>
           ))}
           
           {/* More Menu */}
-          <div className="relative ml-4 pl-4 border-l border-border">
-            <div className="flex items-center space-x-1">
+          <div className="relative ml-6 pl-6 border-l border-border/50">
+            <div className="flex items-center space-x-2">
               {secondaryItems?.map((item) => (
                 <Button
                   key={item?.action}
@@ -84,7 +84,7 @@ const Header = () => {
                   iconName={item?.icon}
                   iconPosition="left"
                   iconSize={18}
-                  className="transition-all duration-200 ease-out"
+                  className="transition-all duration-300 ease-out hover:scale-105 font-medium"
                 >
                   {item?.label}
                 </Button>
@@ -105,8 +105,8 @@ const Header = () => {
       </div>
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-t border-border shadow-earth-md animate-slide-in">
-          <nav className="px-6 py-4 space-y-2">
+        <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border shadow-earth-lg animate-slide-in">
+          <nav className="px-6 py-6 space-y-3">
             {navigationItems?.map((item) => (
               <Button
                 key={item?.path}
@@ -117,13 +117,13 @@ const Header = () => {
                 iconName={item?.icon}
                 iconPosition="left"
                 iconSize={18}
-                className="justify-start transition-all duration-200 ease-out"
+                className="justify-start transition-all duration-300 ease-out font-medium"
               >
                 {item?.label}
               </Button>
             ))}
             
-            <div className="pt-2 mt-4 border-t border-border">
+            <div className="pt-3 mt-6 border-t border-border/50 space-y-2">
               {secondaryItems?.map((item) => (
                 <Button
                   key={item?.action}
@@ -134,7 +134,7 @@ const Header = () => {
                   iconName={item?.icon}
                   iconPosition="left"
                   iconSize={18}
-                  className="justify-start transition-all duration-200 ease-out"
+                  className="justify-start transition-all duration-300 ease-out font-medium"
                 >
                   {item?.label}
                 </Button>

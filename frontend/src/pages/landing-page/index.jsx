@@ -17,47 +17,54 @@ const LandingPage = () => {
     <div className="min-h-screen bg-background">
       <Header />
       {/* Main Content */}
-      <main className="pt-16">
-        <div className="container mx-auto px-6 py-12 space-y-16">
+      <main className="pt-20">
+        <div className="container mx-auto px-6 py-16 space-y-24 max-w-7xl">
           {/* Hero Section */}
-          <section>
+          <section className="relative">
             <HeroSection onStartAssessment={handleStartAssessment} />
           </section>
 
           {/* Benefits Section */}
-          <section>
+          <section className="relative">
             <BenefitsSection />
           </section>
 
           {/* Process Overview */}
-          <section>
+          <section className="relative">
             <ProcessOverview />
           </section>
 
           {/* Trust Signals */}
-          <section>
+          <section className="relative">
             <TrustSignals />
           </section>
 
           {/* Final CTA Section */}
-          <section className="text-center">
-            <div className="bg-gradient-to-r from-primary to-secondary rounded-xl p-12 text-white shadow-earth-lg">
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                Ready to Transform Your Sustainability Assessment?
-              </h2>
-              <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-                Join leading manufacturers in making data-driven decisions for a more sustainable future
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button
-                  onClick={handleStartAssessment}
-                  className="bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-50 transition-colors duration-300 shadow-earth-md hover:shadow-earth-lg transform hover:scale-105"
-                >
-                  Start Your Assessment Now
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300">
-                  Schedule Demo
-                </button>
+          <section className="text-center relative">
+            <div className="bg-gradient-to-br from-primary via-primary to-secondary rounded-2xl p-16 text-white shadow-earth-lg relative overflow-hidden">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 backdrop-blur-3xl"></div>
+              <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-32 -translate-y-32"></div>
+              <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-48 translate-y-48"></div>
+              
+              <div className="relative z-10">
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight">
+                  Ready to Transform Your Sustainability Assessment?
+                </h2>
+                <p className="text-xl md:text-2xl mb-12 opacity-95 max-w-3xl mx-auto leading-relaxed">
+                  Join leading manufacturers in making data-driven decisions for a more sustainable future
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                  <button
+                    onClick={handleStartAssessment}
+                    className="bg-white text-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-earth-lg hover:shadow-earth-xl transform hover:scale-105"
+                  >
+                    Start Your Assessment Now
+                  </button>
+                  <button className="border-2 border-white text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-primary transition-all duration-300 shadow-earth-md">
+                    Schedule Demo
+                  </button>
+                </div>
               </div>
             </div>
           </section>

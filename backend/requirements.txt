@@ -1,0 +1,162 @@
+# ===================================
+# LCA Assessment System - Backend Dependencies
+# ===================================
+# Production-ready requirements for Aluminum & Copper LCA backends
+# Last Updated: November 9, 2025
+# Python Version: 3.10+
+
+# ===================================
+# Core Web Framework
+# ===================================
+Flask==3.1.2
+Flask-CORS==6.0.1
+Werkzeug==3.1.3
+
+# ===================================
+# Machine Learning & Data Science
+# ===================================
+# Core ML Libraries
+scikit-learn==1.7.2
+joblib==1.5.2
+
+# Advanced ML Models
+xgboost==3.0.5
+lightgbm==4.6.0
+
+# Data Processing
+numpy==2.2.6
+pandas==2.3.2
+scipy==1.15.3
+
+# Model Evaluation & Metrics
+imbalanced-learn==0.14.0
+
+# ===================================
+# Deep Learning & AI (Optional LLM Enhancement)
+# ===================================
+torch>=2.8.0
+transformers>=4.56.2
+safetensors>=0.6.2
+tokenizers>=0.22.0
+accelerate>=1.10.1
+
+# ===================================
+# Visualization & Analysis
+# ===================================
+matplotlib==3.10.6
+seaborn==0.13.2
+plotly>=5.14.0  # For interactive charts
+
+# Model Interpretability
+shap==0.48.0
+
+# ===================================
+# Database (Future Integration)
+# ===================================
+# Uncomment when integrating database
+# SQLAlchemy==2.0.43
+# mysqlclient==2.2.7
+# psycopg2-binary>=2.9.9  # PostgreSQL
+
+# ===================================
+# API & Web Services
+# ===================================
+requests>=2.32.5
+urllib3>=2.5.0
+aiohttp>=3.12.15
+
+# ===================================
+# Configuration & Environment
+# ===================================
+python-dotenv>=1.0.0
+python-decouple>=3.8
+PyYAML>=6.0.2
+
+# ===================================
+# Data Validation & Serialization
+# ===================================
+pydantic>=2.11.9
+pydantic-core>=2.33.2
+
+# ===================================
+# Utilities
+# ===================================
+python-dateutil>=2.9.0
+pytz>=2025.2
+tqdm>=4.67.1  # Progress bars
+colorama>=0.4.6  # Colored terminal output
+colorlog>=6.9.0  # Colored logging
+
+# ===================================
+# Testing (Development)
+# ===================================
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+
+# ===================================
+# Code Quality (Development)
+# ===================================
+black>=24.0.0
+flake8>=7.0.0
+pylint>=3.0.0
+mypy>=1.8.0
+
+# ===================================
+# Performance Monitoring (Optional)
+# ===================================
+# psutil>=7.0.0
+# GPUtil>=1.4.0
+
+# ===================================
+# Alternative Frameworks (For Future Migration)
+# ===================================
+# Uncomment when migrating to Django/FastAPI
+# Django>=5.2.6
+# djangorestframework>=3.16.1
+# django-cors-headers>=4.8.0
+# django-filter>=25.1
+# FastAPI>=0.116.1
+# uvicorn>=0.35.0
+# pydantic-settings>=2.0.0
+
+# ===================================
+# Deployment & Production
+# ===================================
+# gunicorn>=22.0.0  # Production WSGI server
+# supervisor>=4.2.5  # Process control
+# redis>=6.4.0  # Caching & task queue
+# celery>=5.5.3  # Asynchronous task queue
+
+# ===================================
+# Documentation
+# ===================================
+# sphinx>=7.0.0
+# sphinx-rtd-theme>=2.0.0
+
+# ===================================
+# Security
+# ===================================
+# cryptography>=42.0.0
+# PyJWT>=2.10.1  # For authentication tokens
+
+# ===================================
+# File Processing
+# ===================================
+openpyxl>=3.1.5  # Excel files
+# pillow>=11.3.0  # Image processing
+
+# ===================================
+# Experiment Tracking (Optional)
+# ===================================
+# wandb>=0.21.4  # Weights & Biases
+# mlflow>=2.10.0  # ML experiment tracking
+
+# ===================================
+# Notes:
+# ===================================
+# - Install with: pip install -r requirements.txt
+# - For development: pip install -r requirements.txt --dev
+# - Uncomment optional packages as needed
+# - Use virtual environment: python -m venv .venv
+# - Activate: .venv\Scripts\activate (Windows) or source .venv/bin/activate (Unix)

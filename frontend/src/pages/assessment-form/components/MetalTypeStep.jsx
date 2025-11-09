@@ -56,19 +56,20 @@ const MetalTypeStep = ({ formData, updateFormData }) => {
   };
 
   return (
-    <div className="space-y-6">
-      <div className="text-center mb-8">
-        <div className="flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mx-auto mb-4">
-          <Icon name="Zap" size={32} color="var(--color-primary)" />
+    <div className="space-y-8">
+      <div className="text-center mb-12">
+        <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl mx-auto mb-6 shadow-earth-lg">
+          <Icon name="Zap" size={40} color="white" strokeWidth={2.5} />
         </div>
-        <h2 className="text-2xl font-semibold text-foreground mb-2">
+        <h2 className="text-3xl font-bold text-foreground mb-4">
           Select Metal Type
         </h2>
-        <p className="text-muted-foreground max-w-md mx-auto">
+        <p className="text-muted-foreground max-w-lg mx-auto text-lg leading-relaxed">
           Choose the primary metal or critical mineral for your production process. This selection determines the baseline environmental impact calculations and available processing routes.
         </p>
       </div>
-      <div className="max-w-md mx-auto">
+      
+      <div className="max-w-lg mx-auto">
         <Select
           label="Metal Type"
           description="Select the metal or critical mineral you want to analyze for environmental impact"
@@ -80,14 +81,17 @@ const MetalTypeStep = ({ formData, updateFormData }) => {
           searchable
         />
       </div>
-      <div className="bg-muted/50 rounded-lg p-4 max-w-md mx-auto">
-        <div className="flex items-start space-x-3">
-          <Icon name="Info" size={20} color="var(--color-primary)" className="mt-0.5 flex-shrink-0" />
+      
+      <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-2xl p-8 max-w-lg mx-auto border border-border/50">
+        <div className="flex items-start space-x-4">
+          <div className="flex items-center justify-center w-10 h-10 bg-primary/20 rounded-xl flex-shrink-0 mt-1">
+            <Icon name="Info" size={24} color="var(--color-primary)" strokeWidth={2.5} />
+          </div>
           <div>
-            <h4 className="text-sm font-medium text-foreground mb-1">
+            <h4 className="text-lg font-bold text-foreground mb-3">
               Why Metal Selection Matters
             </h4>
-            <p className="text-xs text-muted-foreground">
+            <p className="text-sm text-muted-foreground leading-relaxed">
               Different metals and critical minerals have varying environmental footprints based on extraction methods, energy requirements, recyclability potential, and geopolitical supply chain factors.
             </p>
           </div>

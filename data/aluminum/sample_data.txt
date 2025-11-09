@@ -1,0 +1,160 @@
+========================================
+ALUMINUM LCA ASSESSMENT - SAMPLE DATA
+========================================
+
+This file contains sample data for testing the aluminum LCA assessment form.
+Fill in each step with these values to test the system with realistic data
+that differs from the demo template.
+
+========================================
+STEP 1: METAL TYPE
+========================================
+Metal Type: aluminum
+(Select "Aluminum" from the dropdown)
+
+========================================
+STEP 2: PROCESS ROUTE
+========================================
+Process Route: primary
+Is Metallurgy: Yes (Check the box)
+Process Class: primary
+Has Circularity: No (Uncheck the box)
+
+Note: This differs from demo (which uses recycling/secondary)
+
+========================================
+STEP 3: PRODUCTION SCALE
+========================================
+Production Scale: 1000
+(Enter "1000" - representing 1000 tons/year)
+
+Note: Demo uses 500, this is double the scale
+
+========================================
+STEP 4: PRODUCTION DETAILS
+========================================
+Total Inputs: 200
+Total Outputs: 160
+Material Efficiency: 80.0
+Secondary Material Fraction: 25
+
+Note: Primary aluminum production with lower efficiency
+Demo uses: 120/100/83.3/75
+
+========================================
+STEP 5: WASTE MANAGEMENT
+========================================
+Scrap Ratio: 20
+Recycling Rate: 70
+Waste Ratio: 12
+Energy Recovery Rate: 35
+
+Waste Streams (Check these boxes):
+✓ Slag: Yes
+✓ Dust: Yes  
+✓ Water: Yes
+✓ Offgas: Yes
+✗ Tailings: No
+
+Note: Primary production has more waste than recycling
+Demo uses: 15/85/8/45 with different waste streams
+
+========================================
+STEP 6: RECYCLED CONTENT
+========================================
+Recycled Content: 25
+
+Note: Primary aluminum has lower recycled content
+Demo uses: 85
+
+========================================
+STEP 7: ENERGY SOURCE
+========================================
+Energy Source: mixed
+(Select "Mixed Grid" from dropdown)
+
+Note: Primary smelting often uses mixed grid power
+Demo uses: renewable
+
+========================================
+STEP 8: TRANSPORT
+========================================
+Transport Mode: truck
+Transport Distance: local
+Custom Distance: 150
+
+Note: Shorter transport distance for local market
+Demo uses: ship/regional/250
+
+========================================
+STEP 9: END OF LIFE
+========================================
+End of Life Scenario: recycling
+Recovery Rate: medium
+Custom Recovery Rate: 75
+
+Note: Lower recovery rate than demo
+Demo uses: high/90
+
+========================================
+EXPECTED RESULTS COMPARISON
+========================================
+
+This sample represents PRIMARY aluminum production which should show:
+- Higher carbon footprint than recycled aluminum
+- More energy consumption (primary smelting is energy-intensive)
+- Lower material efficiency
+- More waste generation
+- Higher environmental impact scores
+
+Compared to demo data (secondary/recycled aluminum):
+- Carbon footprint should be 3-5x higher
+- Energy consumption should be 10-15x higher
+- Waste generation should be 2-3x higher
+- Overall sustainability score should be lower
+
+========================================
+TESTING SCENARIOS
+========================================
+
+SCENARIO A: Primary Aluminum (This file)
+- Use values above for new aluminum production
+
+SCENARIO B: Mixed Production (Modify step 6)
+- Change Recycled Content to 50
+- Should show intermediate results
+
+SCENARIO C: Transport Variation (Modify step 8)
+- Change to "international" and 2000km
+- Should increase transport emissions
+
+SCENARIO D: Energy Mix Change (Modify step 7)
+- Change to "coal" for worst case
+- Should significantly increase carbon footprint
+
+========================================
+VALIDATION CHECKPOINTS
+========================================
+
+1. Carbon Footprint: Should be 8-15 kg CO2-eq/kg aluminum
+2. Energy Use: Should be 45-55 MJ/kg aluminum  
+3. Water Use: Should be 15-25 L/kg aluminum
+4. Waste Generation: Should be 2-4 kg/kg aluminum
+5. Overall Score: Should be "Needs Improvement" or "Poor"
+
+========================================
+QUICK COPY VALUES
+========================================
+
+For rapid form filling:
+Step 1: aluminum
+Step 2: primary, Yes, primary, No
+Step 3: 1000
+Step 4: 200, 160, 80.0, 25
+Step 5: 20, 70, 12, 35, [slag,dust,water,offgas]
+Step 6: 25
+Step 7: mixed
+Step 8: truck, local, 150
+Step 9: recycling, medium, 75
+
+========================================

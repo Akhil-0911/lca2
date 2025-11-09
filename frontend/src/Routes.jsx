@@ -6,7 +6,6 @@ import NotFound from "pages/NotFound";
 import LandingPage from './pages/landing-page';
 import ResultsDashboard from './pages/results-dashboard';
 import AssessmentForm from './pages/assessment-form';
-import ConnectionTest from './components/ConnectionTest';
 
 const Routes = () => {
   return (
@@ -19,7 +18,6 @@ const Routes = () => {
         <Route path="/landing-page" element={<LandingPage />} />
         <Route path="/results-dashboard" element={<ResultsDashboard />} />
         <Route path="/assessment-form" element={<AssessmentForm />} />
-        <Route path="/test-connection" element={<ConnectionTest />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>
       </ErrorBoundary>

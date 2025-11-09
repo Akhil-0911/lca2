@@ -344,10 +344,10 @@ const AssessmentForm = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main className="pt-16">
-        <div className="max-w-4xl mx-auto px-6 py-8">
+      <main className="pt-20">
+        <div className="max-w-5xl mx-auto px-6 py-12">
           {/* Page Header */}
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <div className="flex items-center justify-center w-20 h-20 bg-primary/10 rounded-full mx-auto mb-4">
               <Icon name="ClipboardList" size={40} color="var(--color-primary)" />
             </div>

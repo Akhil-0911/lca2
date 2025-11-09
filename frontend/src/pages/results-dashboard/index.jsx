@@ -237,14 +237,12 @@ const ResultsDashboard = () => {
     return (
       <div className="min-h-screen bg-background">
         <Header />
-        <div className="pt-16">
-          <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
-            <div className="text-center space-y-4">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
-              <div className="space-y-2">
-                <h3 className="text-lg font-semibold text-foreground">Processing Your Assessment</h3>
-                <p className="text-sm text-muted-foreground">Analyzing environmental impact data...</p>
-              </div>
+        <div className="pt-20">
+          <div className="flex items-center justify-center min-h-[60vh]">
+            <div className="text-center">
+              <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+              <h3 className="text-2xl font-bold text-foreground mb-3">Processing Your Assessment</h3>
+              <p className="text-muted-foreground text-lg">Analyzing environmental impact with AI-powered models...</p>
             </div>
           </div>
         </div>
@@ -252,45 +250,48 @@ const ResultsDashboard = () => {
     );
   }
 
+  // Use resultsData or fallback to defaults 
+  const mockResults = resultsData || defaultResults;
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <div className="pt-16">
-        <div className="max-w-7xl mx-auto px-6 py-8">
-          {/* Header Section */}
-          <div className="mb-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
-              <div>
-                <h1 className="text-3xl font-bold text-foreground mb-2">LCA Assessment Results</h1>
-                <p className="text-muted-foreground">
-                  Comprehensive environmental impact analysis for your metal production process
-                </p>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Button
-                  variant="outline"
-                  onClick={handleNewAssessment}
-                  iconName="Plus"
-                  iconPosition="left"
-                  iconSize={18}
-                >
-                  New Assessment
-                </Button>
-                <Button
-                  variant="default"
-                  onClick={() => setActiveTab('export')}
-                  iconName="Download"
-                  iconPosition="left"
-                  iconSize={18}
-                >
-                  Export Report
-                </Button>
-              </div>
+      <div className="pt-20">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          {/* Page Header */}
+          <div className="flex flex-col md:flex-row md:items-center justify-between mb-12">
+            <div>
+              <h1 className="text-4xl font-bold text-foreground mb-3">LCA Assessment Results</h1>
+              <p className="text-xl text-muted-foreground">
+                Environmental Impact Analysis for {assessmentData?.metalType || 'Aluminum'} Production
+              </p>
+            </div>
+            <div className="flex items-center space-x-4 mt-4 md:mt-0">
+              <Button
+                variant="outline"
+                onClick={handleNewAssessment}
+                iconName="Plus"
+                iconPosition="left"
+                iconSize={20}
+                className="font-semibold"
+              >
+                New Assessment
+              </Button>
+              <Button
+                variant="default"
+                onClick={() => setActiveTab('export')}
+                iconName="Download"
+                iconPosition="left"
+                iconSize={20}
+                className="font-semibold"
+              >
+                Export Report
+              </Button>
             </div>
           </div>
 
           {/* Tab Navigation */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="border-b border-border">
               <nav className="flex space-x-8 overflow-x-auto">
                 {tabs?.map((tab) => (

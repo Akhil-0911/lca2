@@ -24,7 +24,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Model paths - using the improved aluminum models
-MODEL_DIR = Path("improved_models")
+MODEL_DIR = Path(__file__).parent.parent.parent / "models" / "aluminum"
 TIMESTAMP = "20250919_005442"
 
 ENVIRONMENTAL_MODEL_PATH = MODEL_DIR / f"environmental_model_{TIMESTAMP}.pkl"
